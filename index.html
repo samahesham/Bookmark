@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="main-content py-5">
+        <h1 class="text-center">Bookmarker</h1>
+        <div class="bookmark-line py-4"></div>
+        <h2 class="text-center">
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="pt-4">
+          <label for="bookmarkerName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+          </label>
+          <input
+            class="form-control"
+            type="text"
+            name="bookmarkerName"
+            placeholder="Bookmarker Name"
+            oninput="validBookmarkName()"
+            id="bookmarkerName"
+          />
+        </div>
+        <div class="mt-3">
+          <label for="websiteURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+          </label>
+          <input
+            class="form-control"
+            type="url"
+            name="websiteURL"
+            placeholder="Website URL"
+            oninput="validBookmarkURL()"
+            id="websiteURL"
+          />
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <button
+            onclick="addBookmark();"
+            class="btn btn-submit px-5"
+            id="submitBtn"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="bookmark-line py-4"></div>
+      </div>
+      <table class="table text-center bg-light">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

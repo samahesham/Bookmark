@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7ecde;
+  font-family: PT Sans Caption;
+}
+.main-content h1 {
+  color: #352e28;
+  font-size: 50px;
+  font-family: Pacifico;
+  line-height: 60px;
+  margin: 0px 0px 8px 0px;
+  padding: 8px 0px;
+  font-weight: 500;
+  position: relative;
+}
+.main-content h1::before {
+  content: "";
+  position: absolute;
+  width: 21%;
+  height: 25%;
+  left: 39.5%;
+  bottom: 10px;
+  background-color: #fec260;
+  transition: height 350ms;
+  z-index: -1;
+}
+
+.main-content h1:hover::before {
+  height: 50%;
+}
+.main-content .bookmark-line {
+  border-width: 0 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.main-content h2 {
+  font-family: Righteous;
+  font-size: 25px;
+  line-height: 30px;
+  padding-top: 20px;
+  margin: 0px 0px 8px 0;
+  font-weight: 500;
+  background-image: linear-gradient(to right, #40a55c, #b1ac4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-control :focus {
+  color: #212529 !important;
+  background-color: #fff !important;
+  border-color: #d99c39 !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0.25rem #fec26055 !important;
+}
+.main-content .btn-submit{   
+    text-align:center;
+color: #fff;
+  background: #d1512d;
+  border-color: #d1512d;
+  margin-top:20px;
+}
+.main-content .btn-submit:hover{
+color: #fff;
+  background: #bb4120;
+  border-color: #a03315;
+}
+
